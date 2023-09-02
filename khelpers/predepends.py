@@ -1,7 +1,7 @@
 import pip
 
 
-def predepends(packages):
+def installifneeded(packages):
     if isinstance(packages, list):
         package_list = packages
     elif isinstance(packages, str):
