@@ -14,3 +14,15 @@ def installifneeded(packages):
             __import__(package)
         except ImportError:
             pip.main(['install', package])
+
+
+def updatepackage(packages):
+    if isinstance(packages, list):
+        package_list = packages
+    elif isinstance(packages, str):
+        package_list = [packages]
+    else:
+        TypeError("Packages var must be str or list.")
+
+    for package in package_list:
+        pip.main(['install', '-U', package])
