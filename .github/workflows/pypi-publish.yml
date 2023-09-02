@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - '*'
+    paths: ['dist/**']
 
 concurrency:
   group: build-pypi-${{ github.ref }}
